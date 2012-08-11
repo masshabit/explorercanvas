@@ -784,6 +784,13 @@ if (!document.createElement('canvas').getContext) {
     image.runtimeStyle.width = oldRuntimeWidth;
     image.runtimeStyle.height = oldRuntimeHeight;
 
+    if(w == 0) {
+      w = image.getAttribute("width")
+    }
+    if(h == 0) {
+      h = image.getAttribute("height")
+    }
+
     if (arguments.length == 3) {
       dx = arguments[1];
       dy = arguments[2];
